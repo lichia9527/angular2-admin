@@ -1,0 +1,31 @@
+<h1>
+  {{title}}
+</h1>
+
+<button md-button>FLAT</button>
+<button md-raised-button>RAISED</button>
+<button md-icon-button>
+  <md-icon class="md-24">favorite</md-icon>
+</button>
+<button md-fab>
+  <md-icon class="md-24">add</md-icon>
+</button>
+<button md-mini-fab>
+  <md-icon class="md-24">add</md-icon>
+</button>
+<br/>
+<br/>
+
+<button md-raised-button color="primary">PRIMARY</button>
+<button md-raised-button color="accent">ACCENT</button>
+<button md-raised-button color="warn">WARN</button>
+<br/>
+<br/>
+
+<button md-button disabled>OFF</button>
+<button md-raised-button [disabled]="isDisabled">OFF</button>
+<button md-mini-fab [disabled]="isDisabled"><md-icon>check</md-icon></button>
+<br>
+<md-input-container color="red">
+  <input md-input placeholder="Favorite food" value="">
+</md-input-container>
