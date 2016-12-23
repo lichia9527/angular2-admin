@@ -1,0 +1,10 @@
+.nav-bar {
+    height: 65px;
+    position: fixed;
+    top: 0;
+    left: 220px;
+    width: 100%;
+    text-align: center;
+    line-height: 65px;
+    z-index: 1000;
+}
