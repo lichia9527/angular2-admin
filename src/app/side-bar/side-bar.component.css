@@ -3,14 +3,39 @@
     height:100%;
     background: #262B33;
     position: fixed;
-    top: 0;
+    top: 65px;
     left: 0;
     z-index: 999;
 }
-.side-bar-menu {
-    width: 100%;
-    height: 65px;
-    background: #009688;
-    text-align: center;
-    line-height: 65px;
+.side-bar a {
+    color: #bbb;
+    display: block;
+    padding: 20px 15px;
+    font-size: 14px;
+}
+.side-bar a:hover {
+    color: #fff;
+}
+.side-bar .name {
+    padding-left: 10px;
+}
+.material-icons {
+    font-size: 18px;
+    vertical-align: bottom;
+}
+.subnav a {
+    padding: 20px 25px;
+}
+.subnav a:hover {
+    background: #393D42;
+}
+.subnav .material-icons {
+    font-size: 16px;
+}
+.expand-more,.expand-less {
+    float: right;
+}
+.side-bar .active {
+    background: #1f242a;
+    color: #fff;
 }

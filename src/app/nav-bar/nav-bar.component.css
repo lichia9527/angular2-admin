@@ -2,9 +2,58 @@
     height: 65px;
     position: fixed;
     top: 0;
-    left: 220px;
+    left: 0;
     width: 100%;
     text-align: center;
     line-height: 65px;
     z-index: 1000;
+    background: #fff;
+}
+.nav-title {
+    width: 220px;
+    height: 65px;
+    background: #009688;
+    float: left;
+    color: #FFF;
+    font-weight: 600;
+    font-size: 24px;
+}
+.nav-content {
+    height: 65px;
+    padding: 0 0 0 220px;
+}
+.nav-bar a {
+    display: inline-block;
+    height: 65px;
+    border-right: 1px solid #fff;
+}
+.nav-bar a:hover {
+    background: #ececec;
+}
+.nav-bar li {
+    float: left;
+    height: 65px;
+}
+.nav-left{
+    float: left;
+    overflow: hidden;
+}
+.nav-left li a {
+    width: 64px;
+}
+.nav-right{
+    float: right;
+    overflow: hidden;
+}
+.nav-right a {
+    padding: 0 20px;
+}
+.user-img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.user-name {
+    font-weight: 600;
 }

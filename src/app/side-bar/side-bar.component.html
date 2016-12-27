@@ -1,5 +1,21 @@
-<div class="side-bar">
-  <div class="side-bar-menu">
-    SIDE BAR
-  </div>
-</div>
+<aside class="side-bar">
+  <ul>
+      <li *ngFor="let sidebar of sideBarElms;let i=index"  (click)="sideBarElms[i].isShow=!sideBarElms[i].isShow">
+        <a routerLink="/{{sidebar.name | lowercase}}" routerLinkActive="active">
+            <i class="material-icons">{{sidebar.icon}}</i>
+            <span class="name">{{sidebar.name}}</span>
+            <i *ngIf="sidebar.children.length!=0" class="material-icons expand-more">{{sideBarElms[i].isShow?'expand_less':'expand_more'}}</i>
+        </a>
+        <div [style.display]="sideBarElms[i].isShow?'block':'none'" [ngClass]="sideBarElms[i].isShow?'active subnav':'subnav'">
+          <ul>
+            <li *ngFor="let subNav of sidebar.children" >
+              <a href="">
+                <i class="material-icons">{{subNav.icon}}</i>
+                <span class="name">{{subNav.name}}</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </li>
+  </ul>
+</aside>
