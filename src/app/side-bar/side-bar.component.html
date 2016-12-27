@@ -1,21 +1,69 @@
-<aside class="side-bar">
-  <ul>
-      <li *ngFor="let sidebar of sideBarElms;let i=index"  (click)="sideBarElms[i].isShow=!sideBarElms[i].isShow">
-        <a routerLink="/{{sidebar.name | lowercase}}" routerLinkActive="active">
-            <i class="material-icons">{{sidebar.icon}}</i>
-            <span class="name">{{sidebar.name}}</span>
-            <i *ngIf="sidebar.children.length!=0" class="material-icons expand-more">{{sideBarElms[i].isShow?'expand_less':'expand_more'}}</i>
-        </a>
-        <div [style.display]="sideBarElms[i].isShow?'block':'none'" [ngClass]="sideBarElms[i].isShow?'active subnav':'subnav'">
-          <ul>
-            <li *ngFor="let subNav of sidebar.children" >
-              <a href="">
-                <i class="material-icons">{{subNav.icon}}</i>
-                <span class="name">{{subNav.name}}</span>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </li>
-  </ul>
+<aside class="side-bar" [@sideBarSlide]="isCollapse?'slideIn':'slideOut'">
+    <ul>
+        <li>
+            <a routerLink="/dashboard" routerLinkActive="active">
+                <i class="material-icons" [@iconSize]="isCollapse?'slideIn':'slideOut'">home</i>
+                <span class="name" [style.display]="isCollapse?'inline':'none'">Dashboard</span>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:void(0)" (click)="isShow=!isShow">
+                <i class="material-icons" [@iconSize]="isCollapse?'slideIn':'slideOut'">mode_edit</i>
+                <span class="name" [style.display]="isCollapse?'inline':'none'">Form</span>
+                <i class="material-icons expand-more" [style.display]="isCollapse?'inline-block':'none'">{{isShow?'expand_less':'expand_more'}}</i>
+            </a>
+            <div class="subnav" [@listSlide]="isShow&&isCollapse?'in':'out'">
+                <ul>
+                    <li>
+                        <a routerLink="/form/elements" routerLinkActive="active">
+                            <i class="material-icons">lens</i>
+                            <span class="name">Form Elements</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a routerLink="/form/validation" routerLinkActive="active">
+                            <i class="material-icons">lens</i>
+                            <span class="name">Form Validation</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a routerLink="/form/wizard" routerLinkActive="active">
+                            <i class="material-icons">lens</i>
+                            <span class="name">Form Wizard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a routerLink="/form/layouts" routerLinkActive="active">
+                            <i class="material-icons">lens</i>
+                            <span class="name">Form Layouts</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li>
+            <a routerLink="/layout" routerLinkActive="active">
+                <i class="material-icons" [@iconSize]="isCollapse?'slideIn':'slideOut'">view_quilt</i>
+                <span class="name" [style.display]="isCollapse?'inline':'none'">Layout</span>
+            </a>
+        </li>
+        <li>
+            <a routerLink="/tables" routerLinkActive="active">
+                <i class="material-icons" [@iconSize]="isCollapse?'slideIn':'slideOut'">view_list</i>
+                <span class="name" [style.display]="isCollapse?'inline':'none'">Tables</span>
+            </a>
+        </li>
+        <li>
+            <a routerLink="/pages" routerLinkActive="active">
+                <i class="material-icons" [@iconSize]="isCollapse?'slideIn':'slideOut'">web_asset</i>
+                <span class="name" [style.display]="isCollapse?'inline':'none'">Pages</span>
+            </a>
+        </li>
+        <li>
+            <a routerLink="/others" routerLinkActive="active">
+                <i class="material-icons" [@iconSize]="isCollapse?'slideIn':'slideOut'">playlist_add</i>
+                <span class="name" [style.display]="isCollapse?'inline':'none'">Others</span>
+            </a>
+        </li>
+    </ul>
 </aside>

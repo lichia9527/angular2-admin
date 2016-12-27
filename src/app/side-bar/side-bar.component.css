@@ -1,5 +1,4 @@
 .side-bar {
-    width: 220px;
     height:100%;
     background: #262B33;
     position: fixed;
@@ -22,6 +21,9 @@
 .material-icons {
     font-size: 18px;
     vertical-align: bottom;
+}
+.subnav {
+    overflow: hidden;
 }
 .subnav a {
     padding: 20px 25px;

@@ -1,18 +1,18 @@
 <header class="nav-bar box-shadow">
-    <div class="nav-title">
-      <md-icon>dashboard</md-icon>
-      <span>Admin</span>
+    <div class="nav-title" [@collapse2]="isCollapse?'in':'out'">
+        <i class="material-icons" [@collapse1]="isCollapse?'in':'out'">dashboard</i>
+        <span [style.display]="isCollapse?'inline':'none'">Admin</span>
     </div>
-    <div class="nav-content">
+    <div class="nav-content" [@collapse3]="isCollapse?'in':'out'">
         <ul class="nav-left">
-            <li>
+            <li (click)="collapse()">
                 <a href="javascript:void(0)">
-                    <md-icon>menu</md-icon>
+                    <i class="material-icons">menu</i>
                 </a>
             </li>
             <li>
                 <a href="javascript:void(0)">
-                    <md-icon>settings</md-icon>
+                    <i class="material-icons">settings</i>
                 </a>
             </li>
         </ul>

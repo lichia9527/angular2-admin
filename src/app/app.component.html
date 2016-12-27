@@ -1,5 +1,6 @@
-<nav-bar></nav-bar>
-<side-bar></side-bar>
-<section id="content">
+<nav-bar (onIsCollapse)="onIsCollapse($event)"></nav-bar>
+<side-bar [isCollapse]="isCollapse"></side-bar>
+
+<section id="content" [@contentWidth]="isCollapse?'active':'inactive'">
     <router-outlet></router-outlet>
 </section>
