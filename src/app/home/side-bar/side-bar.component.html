@@ -1,7 +1,7 @@
 <aside class="side-bar" [@sideBarSlide]="isCollapse?'slideIn':'slideOut'">
     <ul>
         <li>
-            <a routerLink="/dashboard" routerLinkActive="active">
+            <a routerLink="/home/dashboard" routerLinkActive="active">
                 <i class="material-icons" [@iconSize]="isCollapse?'slideIn':'slideOut'">home</i>
                 <span class="name" [style.display]="isCollapse?'inline':'none'">Dashboard</span>
             </a>
@@ -15,25 +15,25 @@
             <div class="subnav" [@listSlide]="isShow&&isCollapse?'in':'out'">
                 <ul>
                     <li>
-                        <a routerLink="/form/elements" routerLinkActive="active">
+                        <a routerLink="/home/form/elements" routerLinkActive="active">
                             <i class="material-icons">lens</i>
                             <span class="name">Form Elements</span>
                         </a>
                     </li>
                     <li>
-                        <a routerLink="/form/validation" routerLinkActive="active">
+                        <a routerLink="/home/form/validation" routerLinkActive="active">
                             <i class="material-icons">lens</i>
                             <span class="name">Form Validation</span>
                         </a>
                     </li>
                     <li>
-                        <a routerLink="/form/wizard" routerLinkActive="active">
+                        <a routerLink="/home/form/wizard" routerLinkActive="active">
                             <i class="material-icons">lens</i>
                             <span class="name">Form Wizard</span>
                         </a>
                     </li>
                     <li>
-                        <a routerLink="/form/layouts" routerLinkActive="active">
+                        <a routerLink="/home/form/layouts" routerLinkActive="active">
                             <i class="material-icons">lens</i>
                             <span class="name">Form Layouts</span>
                         </a>
@@ -42,25 +42,25 @@
             </div>
         </li>
         <li>
-            <a routerLink="/layout" routerLinkActive="active">
+            <a routerLink="/home/layout" routerLinkActive="active">
                 <i class="material-icons" [@iconSize]="isCollapse?'slideIn':'slideOut'">view_quilt</i>
                 <span class="name" [style.display]="isCollapse?'inline':'none'">Layout</span>
             </a>
         </li>
         <li>
-            <a routerLink="/tables" routerLinkActive="active">
+            <a routerLink="/home/tables" routerLinkActive="active">
                 <i class="material-icons" [@iconSize]="isCollapse?'slideIn':'slideOut'">view_list</i>
                 <span class="name" [style.display]="isCollapse?'inline':'none'">Tables</span>
             </a>
         </li>
         <li>
-            <a routerLink="/pages" routerLinkActive="active">
+            <a routerLink="/home/pages" routerLinkActive="active">
                 <i class="material-icons" [@iconSize]="isCollapse?'slideIn':'slideOut'">web_asset</i>
                 <span class="name" [style.display]="isCollapse?'inline':'none'">Pages</span>
             </a>
         </li>
         <li>
-            <a routerLink="/others" routerLinkActive="active">
+            <a routerLink="/home/others" routerLinkActive="active">
                 <i class="material-icons" [@iconSize]="isCollapse?'slideIn':'slideOut'">playlist_add</i>
                 <span class="name" [style.display]="isCollapse?'inline':'none'">Others</span>
             </a>

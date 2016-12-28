@@ -1,41 +1,59 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { LayoutComponent } from './layout/layout.component';
-import { TablesComponent } from './tables/tables.component';
-import { PagesComponent } from './pages/pages.component';
-import { OthersComponent } from './others/others.component';
-import { FormComponent } from './form/form.component';
-import { FormElementsComponent } from './form/form-elements/form-elements.component';
-import { FormValidationComponent } from './form/form-validation/form-validation.component';
-import { FormWizardComponent } from './form/form-wizard/form-wizard.component';
-import { FormLayoutsComponent } from './form/form-layouts/form-layouts.component';
+import { AdminComponent } from './admin/admin.component';
+import { HomeComponent } from './home/home.component';
+import { SignInComponent } from './admin/sign-in/sign-in.component';
+import { SignUpComponent } from './admin/sign-up/sign-up.component';
+import { DashboardComponent } from './home/dashboard/dashboard.component';
+import { LayoutComponent } from './home/layout/layout.component';
+import { TablesComponent } from './home/tables/tables.component';
+import { PagesComponent } from './home/pages/pages.component';
+import { OthersComponent } from './home/others/others.component';
+import { FormComponent } from './home/form/form.component';
+import { FormElementsComponent } from './home/form/form-elements/form-elements.component';
+import { FormValidationComponent } from './home/form/form-validation/form-validation.component';
+import { FormWizardComponent } from './home/form/form-wizard/form-wizard.component';
+import { FormLayoutsComponent } from './home/form/form-layouts/form-layouts.component';
 
 const appRoutes: Routes = [
   {
     path: '',
-    redirectTo: '/dashboard',
+    redirectTo: '/admin',
     pathMatch: 'full'
   },
-  { path: 'dashboard', component: DashboardComponent },
   {
-    path: 'form',
-    component: FormComponent,
+    path: 'admin',
+    component: AdminComponent,
     children: [
-      { path: '', component: FormElementsComponent },
-      { path: 'elements', component: FormElementsComponent },
-      { path: 'validation', component: FormValidationComponent },
-      { path: 'wizard', component: FormWizardComponent },
-      { path: 'layouts', component: FormLayoutsComponent },
-
+      { path: '', component: SignInComponent },
+      { path: 'sign-in', component: SignInComponent },
+      { path: 'sign-up', component: SignUpComponent}
     ]
-
   },
-  { path: 'tables', component: TablesComponent },
-  { path: 'pages', component: PagesComponent },
-  { path: 'layout', component: LayoutComponent },
-  { path: 'others', component: OthersComponent },
+  {
+    path: 'home',
+    component: HomeComponent,
+    children: [
+      { path: '', component: DashboardComponent },
+      { path: 'dashboard', component: DashboardComponent },
+      { path: 'tables', component: TablesComponent },
+      { path: 'pages', component: PagesComponent },
+      { path: 'layout', component: LayoutComponent },
+      { path: 'others', component: OthersComponent },
+      {
+        path: 'form',
+        component: FormComponent,
+        children: [
+          { path: '', component: FormElementsComponent },
+          { path: 'elements', component: FormElementsComponent },
+          { path: 'validation', component: FormValidationComponent },
+          { path: 'wizard', component: FormWizardComponent },
+          { path: 'layouts', component: FormLayoutsComponent },
+        ]
+      }
+    ]
+  }
 ]
 
 @NgModule({

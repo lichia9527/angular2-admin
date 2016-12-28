@@ -1,0 +1,70 @@
+#signIn {
+    margin: 150px auto;
+    max-width: 500px;
+    height: 395px;
+    position: relative;
+}
+
+#signIn h1 {
+    font-size: 40px;
+    color: #009688;
+    text-align: center;
+    padding: 40px 0 20px;
+}
+
+.box1 {
+    background: #fff;
+    width: 85%;
+    margin: 0 auto;
+    padding: 10px 20px;
+    overflow: hidden;
+    border-radius: 2px;
+    position: relative;
+    z-index: 10;
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.input-container {
+    width: 100%;
+    margin: 10px 0;
+}
+
+.btn-sign-in {
+    color: #009688;
+    float: right;
+    margin: 20px 0 10px;
+}
+
+.box2 {
+    width: 100%;
+    height: 205px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 5;
+    background: #009688;
+    border-radius: 2px;
+}
+
+.position {
+    width: 100%;
+    position: absolute;
+    bottom: 21px;
+    left: 0;
+    text-align: center
+}
+
+.position a {
+    color: #fff;
+    font-size: 12px;
+    padding: 15px;
+}
+
+.position a:hover {
+    text-decoration: underline;
+}
+
+.position span {
+    padding: 1px;
+    background: #fff;
+}
