@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
+import { AuthService } from './auth/auth.service';
+import { AuthGuard } from './auth/auth-guard.sevice';
+
 import { AdminComponent } from './admin/admin.component';
 import { HomeComponent } from './home/home.component';
 import { SignInComponent } from './admin/sign-in/sign-in.component';
@@ -34,6 +37,7 @@ const appRoutes: Routes = [
   {
     path: 'home',
     component: HomeComponent,
+    canActivate: [AuthGuard],
     children: [
       { path: '', component: DashboardComponent },
       { path: 'dashboard', component: DashboardComponent },
@@ -65,5 +69,9 @@ const appRoutes: Routes = [
   exports: [
     RouterModule
   ],
+  providers: [
+    AuthService,
+    AuthGuard,
+  ]
 })
 export class AppRoutingModule { }
