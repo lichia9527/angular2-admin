@@ -6,7 +6,7 @@
 [Anagular2](https://angular.io/)
 
 ### 使用
-`
+
 git clone xxxx
 
 cd angular2-admin
@@ -14,4 +14,3 @@ cd angular2-admin
 npm install
 
 npm start
-`
