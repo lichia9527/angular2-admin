@@ -3,7 +3,7 @@
 ### 学习地址
 [Material For Anagular2](https://material.angular.io)
 
-Anagular2](https://angular.io/)
+[Anagular2](https://angular.io/)
 
 ### 使用
 `
